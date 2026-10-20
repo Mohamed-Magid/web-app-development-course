@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Section 4 Lab - CSS Basics (Combined Showcase)</title>
+
+    <!-- ============================================================
+         SECTION 4 LAB - CSS BASICS
+         One combined page demonstrating everything from Lecture 4:
+         what CSS is, the three ways to add it (inline, internal,
+         external), CSS syntax, selectors (element, class, ID),
+         colors, fonts, backgrounds, and CSS priority (specificity).
+         This page itself is styled with INTERNAL CSS below.
+         Separate topic files live in this same folder (01- ... 11-).
+         ============================================================ -->
+    <style>
+        /* Element selectors: base styles for the whole page */
+        body {
+            background-color: #f4f9fd;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+        h1 {
+            color: darkblue;
+            text-align: center;
+        }
+        h2 {
+            color: #1a5276;
+        }
+
+        /* Class selectors: reusable styling */
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+        .note {
+            color: darkgreen;
+            font-style: italic;
+        }
+
+        /* ID selector: one unique element */
+        #intro {
+            color: darkslategray;
+            font-size: 18px;
+        }
+
+        /* Color formats demo (name, RGB, HEX) */
+        .color-name { color: red; }
+        .color-rgb  { color: rgb(255, 0, 0); }
+        .color-hex  { color: #FF0000; }
+
+        /* Font properties demo */
+        .big-bold   { font-size: 24px; font-weight: bold; }
+        .shorthand  { font: italic bold 20px Arial, sans-serif; }
+
+        /* Background image demo */
+        .photo-box {
+            background-image: url('profile.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 300px;
+            height: 200px;
+            color: white;
+        }
+
+        /* Specificity demo: #winner overrides .winner overrides p */
+        p.winner { color: green; }
+        .winner  { color: blue; }
+        #winner  { color: red; }
+    </style>
+</head>
+<body>
+    <!-- Main heading: exactly one <h1> per page -->
+    <h1>Section 4 Lab - CSS Basics</h1>
+    <p id="intro">This single page combines every topic from the lecture and is
+       styled entirely by the internal CSS in the &lt;style&gt; tag above.
+       Use the links below to open the separate topic files.</p>
+
+    <!-- Navigation links to the separate files (href attribute) -->
+    <h2>Separate Topic Files</h2>
+    <p>
+        <a href="01-what-is-css.html">01 - What is CSS</a> |
+        <a href="02-inline-css.html">02 - Inline CSS</a> |
+        <a href="03-internal-css.html">03 - Internal CSS</a> |
+        <a href="04-external-css.html">04 - External CSS</a> |
+        <a href="05-css-syntax.html">05 - CSS Syntax</a> |
+        <a href="06-css-selectors.html">06 - Selectors</a> |
+        <a href="07-colors.html">07 - Colors</a> |
+        <a href="08-fonts.html">08 - Fonts</a> |
+        <a href="09-backgrounds.html">09 - Backgrounds</a> |
+        <a href="10-css-priority.html">10 - CSS Priority</a> |
+        <a href="11-assignment-personal-page.html">11 - Assignment</a>
+    </p>
+
+    <hr>
+
+    <!-- ========== 1. WHAT IS CSS ========== -->
+    <h2>1. What is CSS?</h2>
+    <p><b>Cascading Style Sheets</b> - a stylesheet language that controls the
+       visual presentation of web pages. It controls appearance of elements,
+       manages layout and spacing, and <span class="highlight">separates content
+       (HTML) from design (CSS)</span>. This whole page is the "after" picture:
+       without CSS it would be plain black text on white.</p>
+
+    <hr>
+
+    <!-- ========== 2. THREE WAYS TO ADD CSS ========== -->
+    <h2>2. Three Ways to Add CSS</h2>
+    <p><b>Inline CSS</b> - inside the element with the style attribute:
+        <span style="color: blue; font-size: 20px;">this text is styled inline</span>.
+       Styles apply only to that element - quick to test, hard to maintain.</p>
+    <p><b>Internal CSS</b> - inside a &lt;style&gt; tag in the &lt;head&gt;.
+       That is how THIS page is styled: one place, applies to the whole document,
+       but cannot be shared with other pages.</p>
+    <p><b>External CSS</b> - a separate .css file linked with
+       <b>&lt;link rel="stylesheet" href="style.css"&gt;</b>.
+       Reusable across pages, clean, and the industry standard.
+       See it in action: <a href="04-external-css.html">04-external-css.html</a>
+       (powered by <a href="style.css">style.css</a>).</p>
+
+    <hr>
+
+    <!-- ========== 3. CSS SYNTAX ========== -->
+    <h2>3. CSS Syntax</h2>
+    <p>Every rule follows the same structure:
+       <b>selector { property: value; }</b></p>
+    <p class="note">Example: p { color: blue; font-size: 18px; } -
+       the selector is p, the properties are color and font-size,
+       blue and 18px are the values.</p>
+
+    <hr>
+
+    <!-- ========== 4. CSS SELECTORS ========== -->
+    <h2>4. CSS Selectors (Element, Class, ID)</h2>
+    <p><b>Element selector</b> - <b>h2 { color: #1a5276; }</b> targets every
+       &lt;h2&gt; on this page (all the section titles share its color).</p>
+    <p><b>Class selector</b> - starts with a dot and is reusable:
+       <span class="highlight">.highlight { background-color: yellow; }</span>
+       and <span class="note">.note { color: darkgreen; }</span>
+       are used in several places on this page.</p>
+    <p><b>ID selector</b> - starts with # and targets ONE unique element:
+       the intro paragraph at the top uses <b>#intro { font-size: 18px; }</b>.
+       Each ID should appear only once per page.</p>
+
+    <hr>
+
+    <!-- ========== 5. COLORS ========== -->
+    <h2>5. Colors in CSS</h2>
+    <p>Three methods, same red:</p>
+    <p class="color-name">color: red; (color name)</p>
+    <p class="color-rgb">color: rgb(255, 0, 0); (RGB values, 0-255 per channel)</p>
+    <p class="color-hex">color: #FF0000; (HEX code, format #RRGGBB)</p>
+
+    <hr>
+
+    <!-- ========== 6. FONTS ========== -->
+    <h2>6. CSS Fonts</h2>
+    <p>This page sets <b>font-family: Arial, Helvetica, sans-serif;</b> on the
+       body - the browser tries each font in order (fallback list).</p>
+    <p class="big-bold">font-size: 24px; font-weight: bold;
+       (sizes can use px, em, rem, %)</p>
+    <p class="shorthand">Shorthand: font: italic bold 20px Arial, sans-serif;
+       (order: style, weight, size, family - size and family are required)</p>
+
+    <hr>
+
+    <!-- ========== 7. BACKGROUNDS ========== -->
+    <h2>7. Backgrounds</h2>
+    <p>The page body uses <b>background-color: #f4f9fd;</b> -
+       background colors accept names, HEX, or RGB values.</p>
+    <p>The box below uses <b>background-image: url('profile.jpg');</b> with
+       background-size: cover, background-position: center, and
+       background-repeat: no-repeat:</p>
+    <div class="photo-box">Text over a background image</div>
+
+    <hr>
+
+    <!-- ========== 8. CSS PRIORITY (SPECIFICITY) ========== -->
+    <h2>8. CSS Priority (Specificity)</h2>
+    <p>When multiple rules target the same element, the browser picks by priority.</p>
+    <p><b>By source:</b> inline CSS (highest) &gt; internal CSS &gt; external CSS
+       (lowest). <span style="color: purple;">This text has an inline style that
+       overrides everything else.</span></p>
+    <p><b>By selector:</b> ID (highest) &gt; class &gt; element (lowest).
+       The paragraph below is targeted by all three - and the ID wins:</p>
+    <p id="winner" class="winner">p says green, .winner says blue,
+       #winner says red - so I am red.</p>
+
+    <!-- ========== ASSIGNMENT ========== -->
+    <h2>Assignment: Personal Webpage</h2>
+    <p>Requirements: use element, class, and ID selectors; apply text colors to
+       headings and paragraphs; add background styling; and put all CSS in a
+       separate external file linked with &lt;link&gt;.
+       Submit both the HTML and CSS files before the next lecture.
+       Solution: <a href="11-assignment-personal-page.html">11-assignment-personal-page.html</a>
+       (styled by <a href="assignment-style.css">assignment-style.css</a>)</p>
+
+    <hr>
+    <p><small>Web App Development - Lecture 4: CSS Basics | Instructor: Eng. Moataz Ibrahim</small></p>
+</body>
+</html>

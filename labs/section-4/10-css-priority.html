@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>10 - CSS Priority (Specificity)</title>
+
+    <!-- CSS PRIORITY - when multiple rules target the same element,
+         the browser uses priority rules to decide which style wins.
+
+         BY SOURCE:
+           1. Inline CSS   - HIGHEST priority (style attribute)
+           2. Internal CSS - medium priority (<style> in head)
+           3. External CSS - lowest priority (linked .css file)
+
+         BY SELECTOR:
+           1. ID selector      - HIGHEST priority  (#title)
+           2. Class selector   - medium priority   (.highlight)
+           3. Element selector - lowest priority   (h1) -->
+    <style>
+        /* All three rules below target the SAME paragraph.
+           Result: RED wins, because the ID selector has the
+           highest specificity (#demo wins over .demo wins over p). */
+        p {
+            color: green;   /* element selector - lowest priority */
+        }
+        .demo {
+            color: blue;    /* class selector - medium priority */
+        }
+        #demo {
+            color: red;     /* ID selector - highest priority */
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Priority (Specificity)</h1>
+
+    <h2>Selector Priority</h2>
+    <p id="demo" class="demo">This paragraph is targeted by an element
+       selector (green), a class selector (blue), AND an ID selector (red).
+       It appears <b>red</b> - the ID selector always wins.</p>
+
+    <h2>Source Priority</h2>
+    <!-- The internal CSS above says p { color: green; }, but the inline
+         style attribute below overrides it: inline > internal > external -->
+    <p style="color: purple;">Internal CSS says paragraphs are green, but this
+       paragraph is <b>purple</b> - inline CSS overrides all other styles.</p>
+
+    <p><small>Remember: inline CSS has the highest priority, and among
+       selectors, ID beats class beats element.</small></p>
+
+    <p><a href="index.html">Back to the combined showcase</a></p>
+</body>
+</html>

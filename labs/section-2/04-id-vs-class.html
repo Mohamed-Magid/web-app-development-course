@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>04 - id vs class</title>
+</head>
+<body>
+    <h1>id vs class in HTML</h1>
+
+    <h2>Using id — one unique element</h2>
+    <!-- id must be unique in the page; it identifies a single element -->
+    <div id="header">This div has id="header" — there can be only one like it.</div>
+
+    <h2>Using class — group multiple elements</h2>
+    <!-- class can be used on multiple elements, and one element can have
+         multiple classes separated by spaces -->
+    <div class="box highlight">Box 1 — class="box highlight"</div>
+    <div class="box">Box 2 — class="box"</div>
+    <div class="box highlight">Box 3 — class="box highlight"</div>
+
+    <h2>Comparison</h2>
+    <p><b>Uniqueness:</b> id must be unique in the page; class can be used on multiple elements.</p>
+    <p><b>Purpose:</b> id identifies a single element; class groups multiple elements.</p>
+    <p><b>CSS selector:</b> #idName vs .className</p>
+    <p><b>JavaScript access:</b> getElementById("idName") vs getElementsByClassName("className")</p>
+    <p><b>Multiple values:</b> an element cannot have multiple ids, but it can have
+       multiple classes, e.g. &lt;div class="box highlight"&gt;</p>
+
+    <p><i>Use id when you need one unique element. Use class when you need to apply
+       styles or scripts to many elements.</i></p>
+
+    <p><a href="index.html">Back to the combined showcase</a></p>
+</body>
+</html>

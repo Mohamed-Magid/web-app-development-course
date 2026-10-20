@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Section 3 Lab - HTML Elements (Combined Showcase)</title>
+</head>
+<body>
+    <!-- ============================================================
+         SECTION 3 LAB - HTML ELEMENTS
+         One combined page demonstrating everything from Lecture 3:
+         lists, list attributes, links, images, tables, table
+         attributes, forms, input vs label, input types, and an
+         example registration form.
+         Separate topic files live in this same folder (01- ... 10-).
+         ============================================================ -->
+
+    <!-- Main heading: exactly one <h1> per page -->
+    <h1>Section 3 Lab - HTML Elements</h1>
+    <p>This single page combines every topic from the lecture.
+       Use the links below to open the separate topic files.</p>
+
+    <!-- Navigation links to the separate files (href attribute) -->
+    <h2>Separate Topic Files</h2>
+    <p>
+        <a href="01-lists.html">01 - Lists</a> |
+        <a href="02-list-attributes.html">02 - List Attributes</a> |
+        <a href="03-links.html">03 - Links</a> |
+        <a href="04-images.html">04 - Images</a> |
+        <a href="05-tables.html">05 - Tables</a> |
+        <a href="06-table-attributes.html">06 - Table Attributes</a> |
+        <a href="07-forms.html">07 - Forms</a> |
+        <a href="08-input-types.html">08 - Input Types</a> |
+        <a href="09-example-form.html">09 - Example Form</a> |
+        <a href="10-assignment-registration-form.html">10 - Assignment</a>
+    </p>
+
+    <hr>
+
+    <!-- ========== 1. HTML LISTS ========== -->
+    <h2>1. HTML Lists</h2>
+    <p>Lists organize information in a structured way.
+       <b>&lt;ul&gt;</b> defines the list container, <b>&lt;li&gt;</b> defines each item.</p>
+    <p><b>Unordered list (bullets)</b> - navigation menus, feature lists:</p>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    <p><b>Ordered list (numbers)</b> - step-by-step guides, ranked items:</p>
+    <ol>
+        <li>Open VS Code</li>
+        <li>Create HTML file</li>
+        <li>Run the file in browser</li>
+    </ol>
+
+    <hr>
+
+    <!-- ========== 2. LIST ATTRIBUTES ========== -->
+    <h2>2. List Attributes</h2>
+    <p><b>&lt;ol&gt; type</b>: 1 (numbers), I (Roman), A (uppercase), i (Roman small), a (lowercase).
+       <b>start</b> sets the starting number, <b>reversed</b> reverses the order:</p>
+    <ol type="A" start="5" reversed>
+        <li>A, starting at 5, reversed</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ol>
+    <p><b>&lt;ul&gt; type</b>: disc (default), circle, square:</p>
+    <ul type="square">
+        <li>Square bullet</li>
+        <li>Square bullet</li>
+    </ul>
+
+    <hr>
+
+    <!-- ========== 3. HTML LINKS ========== -->
+    <h2>3. HTML Links (Anchor Tag)</h2>
+    <p>The <b>&lt;a&gt;</b> tag defines a hyperlink:
+       <b>&lt;a href="URL"&gt;</b>Link Text<b>&lt;/a&gt;</b></p>
+    <p>Main attributes: <b>href</b> (destination), <b>target</b> (where to open),
+       <b>title</b> (hover info), <b>download</b> (download the file), <b>rel</b> (page relationship).</p>
+    <p><b>External</b> (full URL to another website):
+        <a href="https://www.youtube.com" target="_blank" title="Opens YouTube in a new tab">YouTube</a>
+    </p>
+    <p><b>Internal</b> (file in this project, or a section of the same page with #id):
+        <a href="01-lists.html">Lists page</a> |
+        <a href="#footer">Jump to footer</a>
+    </p>
+    <p><a href="profile.jpg" download>Download a file (download attribute)</a></p>
+
+    <hr>
+
+    <!-- ========== 4. HTML IMAGES ========== -->
+    <h2>4. HTML Images</h2>
+    <p><b>src</b> specifies the image file path or URL. <b>alt</b> describes the image,
+       shows when it cannot load, and helps accessibility and SEO.
+       <b>&lt;img&gt;</b> is self-closing - no closing tag needed.</p>
+    <img src="profile.jpg" alt="Profile Image">
+    <p><small>Broken image shows the alt text instead:
+        <img src="missing-image.jpg" alt="Profile Image">
+    </small></p>
+
+    <hr>
+
+    <!-- ========== 5. HTML TABLES ========== -->
+    <h2>5. HTML Tables</h2>
+    <p><b>&lt;table&gt;</b> container, <b>&lt;tr&gt;</b> row,
+       <b>&lt;th&gt;</b> bold header, <b>&lt;td&gt;</b> data:</p>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Ali</td>
+            <td>21</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- ========== 6. TABLE ATTRIBUTES ========== -->
+    <h2>6. Table Attributes</h2>
+    <p><b>&lt;table&gt;</b>: border, cellpadding, cellspacing, width.
+       <b>&lt;tr&gt;</b>: align (left / center / right).
+       <b>&lt;td&gt;</b>: colspan, rowspan, align.
+       <small>For modern styling, use CSS instead.</small></p>
+    <table border="1" cellpadding="10" cellspacing="5" width="300">
+        <tr align="center">
+            <th colspan="2">Student Info</th>
+        </tr>
+        <tr>
+            <td>Ali</td>
+            <td rowspan="2">Age 21</td>
+        </tr>
+        <tr>
+            <td>Ahmed</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- ========== 7. HTML FORMS ========== -->
+    <h2>7. HTML Forms</h2>
+    <p>Forms collect information from users: login, registration, contact, search.
+       <b>&lt;input&gt;</b> collects user data, <b>&lt;label&gt;</b> describes the field,
+       <b>&lt;button&gt;</b> submits the form.</p>
+    <form>
+        <label for="demo-name">Name:</label>
+        <input type="text" id="demo-name" placeholder="Enter your name">
+        <button>Submit</button>
+    </form>
+
+    <hr>
+
+    <!-- ========== 8. INPUT VS LABEL ========== -->
+    <h2>8. &lt;input&gt; vs &lt;label&gt;</h2>
+    <p><b>&lt;input&gt;</b>: accepts user input - self-closing, no inner content;
+       attributes: type, name, value, placeholder, required.</p>
+    <p><b>&lt;label&gt;</b>: descriptive text for an input; clicking it focuses the input
+       whose <b>id</b> matches the label's <b>for</b> attribute:
+        <label for="demo-username">Username:</label>
+        <input type="text" id="demo-username">
+    </p>
+
+    <hr>
+
+    <!-- ========== 9. INPUT TYPES ========== -->
+    <h2>9. Input Types</h2>
+    <form>
+        <p>
+            <label for="demo-text">Text:</label>
+            <input type="text" id="demo-text">
+            <label for="demo-email">Email:</label>
+            <input type="email" id="demo-email">
+        </p>
+        <p>
+            <label for="demo-pass">Password:</label>
+            <input type="password" id="demo-pass">
+            <label for="demo-num">Number:</label>
+            <input type="number" id="demo-num">
+        </p>
+        <p><b>Radio (ONE option only, same name):</b>
+            <input type="radio" id="demo-o1" name="demo-option">
+            <label for="demo-o1">Option 1</label>
+            <input type="radio" id="demo-o2" name="demo-option">
+            <label for="demo-o2">Option 2</label>
+        </p>
+        <p><b>Checkbox (MULTIPLE options):</b>
+            <input type="checkbox" id="demo-c1" name="demo-choice1">
+            <label for="demo-c1">Choice 1</label>
+            <input type="checkbox" id="demo-c2" name="demo-choice2">
+            <label for="demo-c2">Choice 2</label>
+        </p>
+    </form>
+
+    <hr>
+
+    <!-- ========== 10. EXAMPLE FORM ========== -->
+    <h2>10. Example Registration Form</h2>
+    <p>Full example combining different input types:
+       <a href="09-example-form.html">09-example-form.html</a></p>
+
+    <!-- ========== ASSIGNMENT ========== -->
+    <h2>Assignment: Student Registration Form</h2>
+    <p>Requirements: page title, one &lt;h1&gt;, a &lt;form&gt;, at least 5 input fields,
+       radio buttons for gender, checkboxes for courses, and a submit button.
+       Submit as <b>form.html</b> before the next lecture.
+       Solution: <a href="10-assignment-registration-form.html">10-assignment-registration-form.html</a></p>
+
+    <hr>
+    <p id="footer"><small>Web App Development - Lecture 3: HTML Elements | Instructor: Eng. Moataz Ibrahim</small></p>
+</body>
+</html>

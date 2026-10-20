@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>06 - Table Attributes</title>
+</head>
+<body>
+    <!-- Table attributes:
+         <table>: border, cellpadding, cellspacing, width
+         <tr>:    align (left / center / right)
+         <td>:    colspan (span multiple columns), rowspan (span multiple rows), align
+         Note: these attributes control layout; for modern styling use CSS instead. -->
+
+    <h1>Table Attributes</h1>
+
+    <h2>border, cellpadding, cellspacing, width</h2>
+    <table border="1" cellpadding="10" cellspacing="5" width="300">
+        <tr align="center">
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Ali</td>
+            <td>21</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- colspan: a cell that spans multiple columns -->
+    <h2>colspan</h2>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th colspan="2">Full Name</th>
+        </tr>
+        <tr>
+            <td>Ali</td>
+            <td>Ahmed</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- rowspan: a cell that spans multiple rows -->
+    <h2>rowspan</h2>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Course</th>
+            <td rowspan="2">Web Development</td>
+        </tr>
+        <tr>
+            <td>Section 3</td>
+        </tr>
+    </table>
+
+    <p><a href="index.html">Back to the combined showcase</a></p>
+</body>
+</html>

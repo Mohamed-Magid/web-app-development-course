@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required element 1: Page title -->
+    <title>Student Registration Form</title>
+</head>
+<body>
+    <!-- Assignment: Student Registration Form (submit as form.html)
+         Required elements:
+         - Page title using <title>            (in the head, above)
+         - One main heading using <h1>
+         - A form using <form>
+         - At least 5 input fields
+         - Radio buttons for gender
+         - Checkboxes for courses
+         - Submit button -->
+
+    <!-- 2. Main Heading -->
+    <h1>Student Registration Form</h1>
+
+    <!-- 3. The Form -->
+    <form>
+        <!-- 4. Input fields (6 total, 5 required) -->
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Enter your age">
+        <br><br>
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" placeholder="Enter your phone number">
+        <br><br>
+
+        <!-- 5. Radio buttons for gender (same name = one selection only) -->
+        <b>Gender:</b>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <br><br>
+
+        <!-- 6. Checkboxes for courses (multiple selections allowed) -->
+        <b>Courses:</b>
+        <input type="checkbox" id="html" name="course" value="html">
+        <label for="html">HTML</label>
+        <input type="checkbox" id="css" name="course" value="css">
+        <label for="css">CSS</label>
+        <input type="checkbox" id="js" name="course" value="js">
+        <label for="js">JavaScript</label>
+        <br><br>
+
+        <!-- 7. Submit button -->
+        <button type="submit">Register</button>
+    </form>
+
+    <p><a href="index.html">Back to the combined showcase</a></p>
+</body>
+</html>

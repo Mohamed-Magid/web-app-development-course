@@ -1,0 +1,34 @@
+/* ASSIGNMENT SOLUTION - Personal Webpage (external CSS file)
+   Requirements:
+     1. Use 3 selectors: element, class, and ID
+     2. Apply text colors to headings and paragraphs
+     3. Background styling (color or image)
+     4. External CSS file linked to the HTML        (this file) */
+
+/* Element selectors */
+body {
+    background-color: #f0f8ff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: darkblue;
+}
+
+p {
+    color: darkslategray;
+    font-size: 18px;
+}
+
+/* Class selector (reusable) */
+.hobby {
+    color: darkgreen;
+    font-weight: bold;
+}
+
+/* ID selector (unique element) */
+#page-title {
+    color: #1a5276;
+    text-align: center;
+    font-size: 32px;
+}

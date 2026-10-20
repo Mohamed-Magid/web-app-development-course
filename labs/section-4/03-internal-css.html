@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>03 - Internal CSS</title>
+
+    <!-- INTERNAL CSS
+         CSS written inside a <style> tag within the <head> section.
+         The styles apply to the entire HTML document.
+
+         PROS: single-page control, all styles in one place, self-contained
+         CONS: not reusable across pages, larger file size,
+               harder to maintain for large websites -->
+    <style>
+        h1 {
+            color: red;
+            text-align: center;
+        }
+        p {
+            color: darkblue;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Internal CSS</h1>
+    <p>This page is styled by a &lt;style&gt; tag in the &lt;head&gt; section.
+       Every &lt;p&gt; on the page gets the same style automatically.</p>
+    <p>See? No style attributes needed - the rules above apply everywhere.</p>
+
+    <p><a href="index.html">Back to the combined showcase</a></p>
+</body>
+</html>

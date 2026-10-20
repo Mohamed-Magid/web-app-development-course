@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>06 - CSS Selectors</title>
+
+    <!-- CSS SELECTORS - target specific HTML elements and style them:
+
+         1. ELEMENT selector - targets ALL elements of a type:
+              h1 { color: red; }
+
+         2. CLASS selector - targets elements with the same class
+            attribute; reusable across multiple elements; starts with a dot:
+              .highlight { background-color: yellow; }
+
+         3. ID selector - targets ONE unique element by its id;
+            each id should appear only once per page; starts with #:
+              #main-title { color: blue; } -->
+    <style>
+        /* 1. Element selector: every <h2> on this page is red */
+        h2 {
+            color: red;
+            font-size: 32px;
+        }
+
+        /* 2. Class selector: reusable on any element */
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+
+        /* 3. ID selector: one unique element only */
+        #main-title {
+            color: blue;
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Styled by the ID selector #main-title -->
+    <h1 id="main-title">CSS Selectors</h1>
+
+    <!-- Both headings below are styled by the element selector h2 -->
+    <h2>Element Selector</h2>
+    <p><b>h2 { color: red; }</b> targets every &lt;h2&gt; on the page.
+       Best for base typography styles - simple and broad-reaching.</p>
+
+    <h2>Class Selector</h2>
+    <p class="highlight">This paragraph uses <b>class="highlight"</b> -
+       styled by <b>.highlight { background-color: yellow; }</b>.</p>
+    <p class="highlight">The same class is reused here - classes are
+       meant to be applied to multiple elements.</p>
+
+    <h2>ID Selector</h2>
+    <p>The page title above uses <b>id="main-title"</b> - styled by
+       <b>#main-title { color: blue; }</b>. An ID must be unique on the page;
+       if you need to style multiple elements, use a class instead.</p>
+
+    <p><a href="index.html">Back to the combined showcase</a></p>
+</body>
+</html>

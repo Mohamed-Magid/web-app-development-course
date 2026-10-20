@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Section 2 Lab - HTML Basics (Combined Showcase)</title>
+</head>
+<body>
+    <!-- ============================================================
+         SECTION 2 LAB - HTML BASICS
+         One combined page demonstrating everything from Lecture 2:
+         document structure, tags & elements, attributes, id vs class,
+         headings, paragraphs, text formatting, and comments.
+         Separate topic files live in this same folder (01- ... 10-).
+         ============================================================ -->
+
+    <!-- Main heading: exactly one <h1> per page -->
+    <h1>Section 2 Lab - HTML Basics</h1>
+    <p>This single page combines every topic from the lecture.
+       Use the links below to open the separate topic files.</p>
+
+    <!-- Navigation links to the separate files (href attribute) -->
+    <h2>Separate Topic Files</h2>
+    <p>
+        <a href="01-document-structure.html">01 - Document Structure</a> |
+        <a href="02-tags-and-elements.html">02 - Tags and Elements</a> |
+        <a href="03-attributes.html">03 - Attributes</a> |
+        <a href="04-id-vs-class.html">04 - id vs class</a> |
+        <a href="05-headings.html">05 - Headings</a> |
+        <a href="06-paragraphs.html">06 - Paragraphs</a> |
+        <a href="07-text-formatting.html">07 - Text Formatting</a> |
+        <a href="08-comments.html">08 - Comments</a> |
+        <a href="09-practice-activity.html">09 - Practice Activity</a> |
+        <a href="10-assignment-personal-page.html">10 - Assignment</a>
+    </p>
+
+    <hr>
+
+    <!-- ========== 1. DOCUMENT STRUCTURE ========== -->
+    <h2>1. HTML Document Structure</h2>
+    <p>Every HTML page uses this structure:</p>
+    <p>
+        <b>&lt;!DOCTYPE html&gt;</b> declares HTML5<br>
+        <b>&lt;html&gt;</b> is the root element<br>
+        <b>&lt;head&gt;</b> holds metadata (like &lt;title&gt;, shown in the browser tab)<br>
+        <b>&lt;body&gt;</b> holds all visible content
+    </p>
+    <p><small>Check this browser tab - it shows this page's &lt;title&gt;.</small></p>
+
+    <hr>
+
+    <!-- ========== 2. TAGS AND ELEMENTS ========== -->
+    <h2>2. HTML Tags and Elements</h2>
+    <p>An element = opening tag + content + closing tag:</p>
+    <p><b>&lt;p&gt;</b> This is the content. <b>&lt;/p&gt;</b></p>
+    <p>The opening tag starts the element, the closing tag (with a forward slash)
+       ends it, and everything in between is the content.</p>
+
+    <hr>
+
+    <!-- ========== 3. ATTRIBUTES ========== -->
+    <h2>3. HTML Attributes</h2>
+    <p>Attributes provide extra information and always go inside the opening tag:
+       <b>attribute="value"</b></p>
+    <p><b>src</b> (image file location) + <b>alt</b> (image description for accessibility):
+        <img src="profile.jpg" alt="profile image">
+    </p>
+    <p><small>&lt;img src="image.jpg" alt="profile image"&gt; — if the image fails to load,
+       the alt text is shown instead.</small></p>
+    <p><b>href</b> on a link:
+        <a href="https://www.example.com">Visit Example</a>
+    </p>
+    <p><b>style</b> (inline CSS):
+        <span style="color: blue;">Blue text via the style attribute.</span>
+    </p>
+
+    <hr>
+
+    <!-- ========== 4. ID VS CLASS ========== -->
+    <h2>4. id vs class</h2>
+    <div id="header">id="header" - unique, identifies ONE element (CSS: #header)</div>
+    <div class="box">class="box" - can be reused on MANY elements (CSS: .box)</div>
+    <div class="box highlight">class="box highlight" - an element can have multiple classes</div>
+    <p><small>id: getElementById("idName") | class: getElementsByClassName("className")</small></p>
+
+    <hr>
+
+    <!-- ========== 5. HEADINGS ========== -->
+    <h2>5. Headings (h1 - h6)</h2>
+    <h3>Section Title (h3)</h3>
+    <h4>Subsection (h4)</h4>
+    <h5>Minor Heading (h5)</h5>
+    <h6>Smallest (h6)</h6>
+    <p><i>Guidelines: one &lt;h1&gt; per page, don't skip levels,
+       headings carry semantic meaning - not just size.</i></p>
+
+    <hr>
+
+    <!-- ========== 6. PARAGRAPHS ========== -->
+    <h2>6. Paragraphs</h2>
+    <p>Welcome to my website.</p>
+    <p>This website was created using HTML.</p>
+    <p><small>Browsers add automatic spacing before and after each &lt;p&gt;.</small></p>
+
+    <hr>
+
+    <!-- ========== 7. TEXT FORMATTING ========== -->
+    <h2>7. Text Formatting</h2>
+    <p><b>Bold Text (&lt;b&gt;)</b> - visual bold styling</p>
+    <p><strong>Important Text (&lt;strong&gt;)</strong> - semantic importance,
+       screen readers emphasize it</p>
+    <p><i>Italic Text (&lt;i&gt;)</i></p>
+    <p><mark>Highlighted Text (&lt;mark&gt;)</mark></p>
+    <p><small>Small Text (&lt;small&gt;)</small></p>
+
+    <hr>
+
+    <!-- ========== 8. COMMENTS ========== -->
+    <h2>8. HTML Comments</h2>
+    <!-- This comment is invisible in the browser - view the source code to see it.
+         Comments document your code and organize the page structure. -->
+    <p>Comments start with <b>&lt;!--</b> and end with <b>--&gt;</b>.
+       They are hidden from users but visible in the source code
+       (right-click this page and choose "View page source").</p>
+
+    <hr>
+
+    <!-- ========== 9. PRACTICE ACTIVITY ========== -->
+    <h2>9. Practice Activity</h2>
+    <p>Task: one &lt;h1&gt;, two paragraphs, and formatted text.
+       Solution: <a href="09-practice-activity.html">09-practice-activity.html</a></p>
+
+    <!-- ========== 10. ASSIGNMENT ========== -->
+    <h2>10. Assignment: My Personal Web Page</h2>
+    <p>Requirements: &lt;title&gt;, one &lt;h1&gt;, two &lt;h2&gt;, two paragraphs,
+       at least 3 formatting tags.
+       Solution: <a href="10-assignment-personal-page.html">10-assignment-personal-page.html</a></p>
+
+    <hr>
+    <p><small>Web App Development - Lecture 2: HTML Basics | Instructor: Eng. Moataz</small></p>
+</body>
+</html>

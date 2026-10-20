@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>03 - HTML Links</title>
+</head>
+<body>
+    <!-- The <a> (anchor) tag defines a hyperlink that connects one page
+         to another resource on the web.
+         Basic syntax: <a href="URL">Link Text</a> -->
+
+    <h1>HTML Links</h1>
+
+    <!-- ========== MAIN ATTRIBUTES ==========
+         href     - specifies the link destination
+         target   - specifies where to open (_blank = new tab)
+         title    - shows extra info on hover
+         download - downloads the linked file
+         rel      - defines page relationship -->
+    <h2>Anchor Tag Attributes</h2>
+    <p>
+        <a href="https://www.example.com" target="_blank" title="Opens in a new tab">
+            External link with target and title (hover me)
+        </a>
+    </p>
+    <p>
+        <a href="profile.jpg" download>Download the image file (download attribute)</a>
+    </p>
+
+    <hr>
+
+    <!-- ========== EXTERNAL LINKS ==========
+         Navigate to other websites using full URLs starting with https:// -->
+    <h2>External Links</h2>
+    <p><a href="https://www.youtube.com">YouTube</a></p>
+
+    <hr>
+
+    <!-- ========== INTERNAL LINKS ==========
+         Navigate within the same website: points to files inside
+         the project folder, or to a section of the same page with #id -->
+    <h2>Internal Links</h2>
+    <p><a href="01-lists.html">About Page (another file in this project)</a></p>
+    <p><a href="#bottom">Jump to the bottom of this page (#id)</a></p>
+
+    <p><small>Complete example from the lecture:
+        &lt;a href="doc.pdf" target="_blank" download&gt;Download File&lt;/a&gt;
+    </small></p>
+
+    <hr>
+    <p id="bottom"><b>You jumped here using href="#bottom".</b></p>
+
+    <p><a href="index.html">Back to the combined showcase</a></p>
+</body>
+</html>

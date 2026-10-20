@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>07 - Colors in CSS</title>
+
+    <!-- COLORS IN CSS - three methods to define colors:
+
+         1. COLOR NAMES - predefined names:
+              color: red;
+            Examples: red, blue, green, yellow
+
+         2. RGB VALUES - Red, Green, Blue values (0-255):
+              color: rgb(255, 0, 0);
+
+         3. HEX CODES - hexadecimal codes starting with #:
+              color: #FF0000;    (format: #RRGGBB) -->
+    <style>
+        .color-name { color: red; }
+        .color-rgb  { color: rgb(255, 0, 0); }
+        .color-hex  { color: #FF0000; }
+    </style>
+</head>
+<body>
+    <h1>Colors in CSS</h1>
+    <p>All three lines below are the SAME red, written three different ways:</p>
+
+    <p class="color-name">color: red; (color name)</p>
+    <p class="color-rgb">color: rgb(255, 0, 0); (RGB value)</p>
+    <p class="color-hex">color: #FF0000; (HEX code)</p>
+
+    <hr>
+
+    <h2>More Examples</h2>
+    <p style="color: blue;">color: blue;</p>
+    <p style="color: rgb(0, 128, 0);">color: rgb(0, 128, 0); (green)</p>
+    <p style="color: #FFA500;">color: #FFA500; (orange)</p>
+
+    <p><a href="index.html">Back to the combined showcase</a></p>
+</body>
+</html>

@@ -1,0 +1,23 @@
+/* EXTERNAL CSS
+   Styles live in a separate .css file and are linked to the HTML
+   using the <link> tag in the <head> section:
+     <link rel="stylesheet" href="style.css">
+
+   KEY BENEFITS:
+     - Reusable: share styles across multiple pages
+     - Cleaner code: separates content from presentation
+     - Easy maintenance: update styles in one location
+     - Industry standard: professional development practice */
+
+body {
+    background-color: lightgray;
+}
+
+h1 {
+    color: blue;
+    font-size: 24px;
+}
+
+p {
+    color: darkgreen;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>02 - Inline CSS</title>
+</head>
+<body>
+    <!-- INLINE CSS
+         CSS written directly inside an HTML element
+         using the style attribute:
+           <h1 style="color: blue; font-size: 24px;">Hello World</h1>
+         The styles apply ONLY to that specific element.
+
+         PROS: quick testing, immediate results, single file
+         CONS: hard to maintain, not reusable, messy code
+         Best for: quick prototypes and testing - avoid in production. -->
+
+    <h1>Inline CSS</h1>
+
+    <!-- Each element below carries its own style attribute -->
+    <h2 style="color: blue; font-size: 24px;">Blue Heading (styled inline)</h2>
+    <p style="color: red;">This paragraph is red.</p>
+    <p style="color: green; background-color: lightgray;">
+       Green text on a light gray background.</p>
+
+    <p><small>Notice: each style had to be repeated on every element.
+       That is why inline CSS does not scale.</small></p>
+
+    <p><a href="index.html">Back to the combined showcase</a></p>
+</body>
+</html>

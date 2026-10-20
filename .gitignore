@@ -1,0 +1,5 @@
+# Lecture slides (large PDFs, kept out of the repo)
+*.pdf
+
+# Distributable lab archives
+labs/*.zip
